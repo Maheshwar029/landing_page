@@ -1,0 +1,763 @@
+// @import 'fonts.googleapis.com'
+
+$font-primary: 'outfit', sans-serif, regular
+
+*
+     margin: 0
+     padding: 0
+     box-sizing: border-box
+
+body
+     font-family: $font-primary
+     // background-color: #fafcff
+     // color: #333
+
+h1
+     font-size: 1.5em
+     font-weight: 600
+
+h1 a
+     text-decoration: none
+     color: #333
+
+// h1 a:hover
+//      color: #3785fb
+//      transform: scale(1.05)
+//      transition: all 0.5s ease-in-out
+
+span
+     color: #3785fb
+     font-weight: 700
+
+nav
+     padding: 1rem
+     position: absolute
+     top: 0
+     left: 50%
+     transform: translateX(-50%)
+     width: 100%
+     max-width: 1200px
+     display: flex
+     align-items: center
+     justify-content: space-between
+
+.nav-links
+     list-style: none
+     display: flex
+
+.links
+     list-style: none
+     color: #333
+     display: flex
+     gap: 50px
+
+.links a
+     text-decoration: none
+     color: #333
+     font: 1.1em
+     font-family: "Outfit", sans-serif
+     font-weight: 400
+
+.links a:hover
+     color: #3785fb
+     transform: scale(1.05)
+     transition: all 0.2s ease-in-out
+
+.btn
+     height: 38px
+     width: 120px
+     background-color: #3785fb
+     color: #fff
+     border: none
+     border-radius: 50px
+     cursor: pointer
+     font-size: 1em
+     font-family: "Outfit", sans-serif
+     font-weight: 400
+     text-decoration: none
+
+.btn:hover
+     background-color: lighten(#3785fb, 5%)
+     transform: scale(1.01)
+     transition: all 0.2s ease-in-out
+
+main
+     background: #fafcff
+
+.section-container
+     max-width: 1200px
+     margin: auto
+     padding: 5rem 1rem
+
+.container
+     min-height: 100vh
+     display: grid
+     grid-template-columns: repeat(2, 1fr)
+     // gap: 2rem
+
+.img-section
+     position: relative
+     display: flex
+     align-items: center
+
+.img-section img
+     position: absolute
+     top: 50%
+     left: 50%
+     border: 0.5rem solid #fff
+     border-radius: 2rem
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1)
+     // object-fit: cover
+
+.img-section img:nth-child(1)
+     transform: translate(-75%, -50%)
+     max-width: 300px
+
+.img-section img:nth-child(2)
+     transform: translate(-0%, -25%)
+     max-width: 200px
+
+.feature-section
+     display: flex
+     flex-direction: column
+     justify-content: center
+     align-items: center
+     padding-left: 1rem
+
+.features
+     max-width: 400px
+     display: grid
+     gap: 1rem
+
+.features span
+     font-size: 1.2rem
+     font-weight: 600
+     color: #3785fb
+
+.features h1
+     font-size: 3.5rem
+     line-height: 4rem
+     font-weight: 800
+     color: #0d213f
+
+.features p
+     font-size: 1.1rem
+     // line-height: 1.8em
+     color: #0d213f
+     max-width: 600px
+     // margin: 1rem 0
+
+.trip
+     display: flex
+     align-items: center
+     gap: 4rem
+     margin-top: 1rem
+
+.story
+     display: flex
+     align-items: center
+     gap: 2rem
+     cursor: pointer
+
+.video-image
+     position: relative
+
+.video-image img
+     width: 60px
+     height: 60px
+     border: none
+     border-radius: 100%
+     // object-fit: cover
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1)
+
+.video-image span
+     position: absolute
+     top: 50%
+     left: 100%
+     transform: translate(-50%, -50%)
+
+.video-image span i
+     padding: 0.5rem
+     font-size: 1rem
+     color: red
+     background: #ffffff
+     border-radius: 100%
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1)
+
+.story span
+     font-size: 1rem
+     font-weight: 600
+     color: #0d213f
+
+.story .video-image:hover
+     transform: scale(1.05)
+     transition: all 0.3s ease-in-out
+
+.section-header
+     display: flex
+     align-items: center
+     justify-content: space-between
+     margin-bottom: 5rem
+     flex-wrap: wrap
+     gap: 2rem
+
+.section-title
+     font-size: 2rem
+     font-weight: 700
+     color: #0d213f
+     margin-bottom: 1rem
+
+.section-subtitle
+     font-size: 1.1rem
+     color: #0d213f
+     max-width: 600px
+
+.destination-nav
+     // list-style: none
+     display: flex
+     gap: 2rem
+
+.destination-nav span
+     width: 30px
+     height: 30px
+     display: grid
+     place-items: center
+     color: #3685f3
+     border-radius: 100%
+     border: 1px solid #3685f3
+     cursor: pointer
+     font-size: 1.5rem
+     transition: all 0.3s
+
+.destination-nav span:hover
+     background-color: #3685f3
+     color: #fff
+
+.destination-grid
+     display: grid
+     grid-template-columns: repeat(4, 1fr)
+     gap: 2rem
+     // background-color: #000
+
+.destination-card
+     border-radius: 1rem
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1)
+     overflow: hidden
+     position: relative
+     isolation: isolate
+     cursor: pointer
+
+.destination-card img
+     border-radius: 1rem
+     width: 100%
+     height: 100%
+     object-fit: cover
+     filter: brightness(70%)
+     transition: 0.3s
+
+.destination-details
+     position: absolute
+     width: calc(100% - 2rem)
+     padding: 1rem
+     bottom: -6rem
+     left: 50%
+     transform: translateX(-50%)
+     text-align: center
+     color: #fff
+     background-color: rgba(255, 255, 255, 0.1)
+     backdrop-filter: blur(4px)
+     border-radius: 10px
+     z-index: 1
+     transition: 0.3s
+
+.destination-card:hover .destination-details
+     bottom: 1rem
+
+.destination-title
+     font-size: 1.2rem
+     font-weight: 600
+
+.destination-card img:hover
+     transform: scale(1.1)
+     transition: all 0.3s ease-in-out
+     filter: brightness(100%)
+
+.trip-section
+     margin-top: 5rem
+     margin-bottom: 10rem
+     // text-align: center
+
+.trip-container
+     max-width: 1200px
+     margin: auto
+     // padding: 0 1rem
+
+.trip-section p
+     max-width: 1200px
+
+.trip-grid
+     display: grid
+     grid-template-columns: repeat(3, 1fr)
+     gap: 2rem
+     margin-top: 5rem
+     margin-bottom: 5rem
+
+.trip-card
+     border-radius: 1rem
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1)
+     cursor: pointer
+     isolation: isolate
+     // position: relative
+
+.trip-card img
+     width: 100%
+     height: 250px
+     border-radius: 1rem
+     object-fit: cover
+     transition: 0.3s
+
+.trip-details
+     // position: absolute
+     display: flex
+     flex-direction: column
+     width: 100%
+     // height: 140px
+     // bottom: 1rem
+     // left: 50%
+     // transform: translateX(-50%)
+     padding: 1.5rem 1rem
+     text-align: left
+     background-color: #ffffff
+     // z-index: -1
+     border-radius: 1rem
+     box-shadow: 0px 4px 6px rgba(0, 0
+, 0, 0.1)
+     transition: 0.3s
+
+// .trip-card:hover .trip-details
+     // bottom: -6rem
+
+.trip-title
+     font-size: 1.4rem
+     font-weight: 800
+     margin-bottom: 0.5rem
+
+.trip-price
+     font-size: 1rem
+     font-weight: 600
+     color: #0d213f
+     margin-top: 0.5rem
+
+.trip-price span
+     font-size: 1rem
+     font-weight: 700
+     color: #3785fb
+     padding: 2rem
+
+.trip-card:hover .trip-price span
+     color: #2563eb
+     transition: all 0.3s ease-in-out
+
+.pack-btn
+     display: flex
+     justify-content: center
+     align-items: center
+
+.packages-btn
+     margin-top: 4rem
+     height: 40px
+     width: 160px
+     background-color: #ffffff
+     border: 1px solid #3785fb
+     color: #3785fb
+     border-radius: 50px
+     cursor: pointer
+     font-size: 1.1em
+     font-family: "Outfit", sans-serif
+     font-weight: 600
+     text-decoration: none
+
+.packages-btn:hover
+     background-color: #3785fb
+     color: #fff
+     transform: scale(1.05)
+     transition: all 0.3s ease-in-out
+
+.gallery-section
+     margin-top: 15rem
+     margin-bottom: 15rem
+
+.gallery-container
+     max-width: 1200px
+     margin: auto
+     padding: 0 1rem
+     display: grid
+     grid-template-columns: 1fr 1fr
+     gap: 5rem
+
+.gallery-images
+     position: relative
+
+.gallery-images img
+     position: absolute
+     top: 50%
+     left: 50%
+     border: 0.5rem solid #fff
+     border-radius: 2rem
+     object-fit: cover
+
+.gallery-images img:nth-child(1)
+     transform: translate(-90%, -50%)
+     max-width: 350px
+     max-height: 400px
+
+.gallery-images img:nth-child(2)
+     transform: translate(10%, -118%)
+     max-width: 220px
+     max-height: 350px
+     // height: 50%
+
+.gallery-images img:nth-child(3)
+     transform: translate(10%, -15%)
+     max-width: 220px
+
+.gallery-text
+     flex: 1
+     display: flex
+     flex-direction: column
+     justify-content: center
+     padding-left: 2rem
+     gap: .8rem
+
+.gallery-text button
+     margin-top: 1rem
+
+.reviews-section
+     max-width: 1200px
+     margin: auto
+     margin-bottom: 8rem
+
+.review-header
+     max-width: 1200px
+     // margin: auto
+     padding: 0 1rem
+     display: flex
+     align-items: center
+     justify-content: space-between
+
+.reviews-grid
+     margin-top: 10rem
+     display: grid
+     grid-template-columns: repeat(3, 1fr)
+     gap: 2rem
+
+.review-card
+     border-radius: 1rem
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, .2)
+     padding: 2rem
+     display: flex
+     flex-direction: column
+     gap: 1rem
+     cursor: pointer
+
+.review-nav
+     position: relative
+     display: flex
+     flex: 1
+     justify-content: space-between
+     align-items: center
+
+.rev-date
+     font-size: 0.8rem
+     color: #333333
+     font-weight: 600
+
+.review-card img
+     position: absolute
+     width: 100px
+     height: 100px
+     top: -80px
+     left: 50%
+     transform: translateX(-50%)
+     border-radius: 100%
+     object-fit: cover
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, .1)
+
+.review-card .rating
+     display: flex
+     flex-direction: column
+     align-items: center
+     gap: 0.2rem
+
+.review-card .rating p
+     color: #333333
+     font-weight: 400
+     margin-right: 0.3rem
+
+.review-card .rating span i
+     font-size: .8rem
+     margin-right: 0.1rem
+
+.reviews
+     display: flex
+     flex-direction: column
+     align-items: center
+
+.review-title
+     color: #333
+     font-weight: 600
+     margin-bottom: 1rem
+
+.review-subtitle
+     color: #438ab3
+     align-items: center
+     font-weight: 400
+
+.review-card:hover
+     box-shadow: 8px 8px 40px rgba(0, 0, 0, .3)
+     transform: scale(1.02)
+     transition: all 0.3s ease-in-out
+
+.subscribe-section
+     width: 100%
+     background: #b8d4fe
+
+.subscribe-container
+     max-width: 1200px
+     margin: auto
+     display: grid
+     grid-template-columns: repeat(2, 1fr)
+     gap: 2rem
+     align-items: center
+     padding: 4.5rem 1.5rem
+
+.sub-content
+     padding-right: 1rem
+     display: flex
+     flex-direction: column
+     gap: .6rem
+
+.sub-content p
+     font-size: .9rem
+
+.sub-email form
+     display: flex
+
+.sub-email input
+     height: 2.6rem
+     width: 22rem
+     border: none
+     border: 1px solid #3785fb
+     border-radius: .5rem 0rem 0rem .5rem
+     color: #333
+     background: #ffff
+     padding: 1rem
+     font-size: 1rem
+     outline: #3785fb
+     // box-shadow: 5px 5px 10px rgba(0, 0, 0, .1) 
+
+.email-btn
+     height: 2.6rem
+     width: 6rem
+     border-radius: .3rem
+     border: none
+     // border: 1px solid #3785fb
+     background: #3785fb
+     color: #fff
+     font-size: .9rem
+     font-weight: 500
+     cursor: pointer
+
+.email-btn:hover
+     background-color: #3073d9
+     transform: scale(1.05)
+     transition: all 0.3s ease-in-out
+
+.upper-footer
+     width: 100%
+     background-color: #467dcf
+
+.footer-box
+     max-width: 1200px
+     margin: auto
+     display: grid
+     grid-template-columns: repeat(3, 1fr)
+     align-items: center
+     padding: 5rem .5rem
+
+.box1
+     // width: 33.3%
+     padding: 3rem 1rem
+     display: block
+     justify-content: center
+     align-items: center
+
+.box1 .logo
+     padding-left: 1.5rem
+     font-size: 2rem
+
+.box1 .logo span
+     color: grey
+     padding-bottom: 1.6rem
+
+.box1 .p1
+     padding: .5rem
+     font-size: 1.3rem
+     font-weight: 300
+     color: #111
+
+.follow-icon
+     padding: 1rem 1rem
+     font-size: 1.5rem
+
+.follow-icon p
+     font-weight: 200
+     padding-bottom: .2rem
+
+.social-icons a
+     color: #333
+     text-decoration: none
+     font-size: 1.5rem
+     font-weight: 500
+
+.box2
+     // width: 33.3%
+     padding-bottom: 3.4rem
+     padding-left: 3rem
+     display: block
+     justify-content: center
+     align-items: center
+
+.box2 h3
+     padding: 1rem
+     font-size: 1.5rem
+     font-weight: 300
+     height: 3.2rem
+     width: 8rem
+     box-shadow: 0px 1px 0px rgba(0, 0, 0, .8)
+
+.box2 div
+     padding-top: 1.4rem
+     padding-left: .5rem
+
+.box2 a
+     text-decoration: none
+     color: #333
+     font-weight: 400
+     font-size: 1.3rem
+
+.box3
+     padding-bottom: 1.5rem
+     padding-left: 4rem
+     display: block
+     justify-content: center
+     align-items: center
+
+.box3 h3
+     padding: 1rem
+     font-size: 1.5rem
+     font-weight: 300
+     height: 3.1rem
+     width: 12rem
+     box-shadow: 0px 1px 0px rgba(0, 0, 0, .8)
+
+.box3 .contact, .address, .mail
+     padding-top: 1.5rem
+     padding-left: .5rem
+
+.box3 a
+     text-decoration: none
+     color: #333
+     font-weight: 400
+     font-size: 1.3rem
+
+.box3 #content
+     text-decoration: none
+     color: #111
+     font-weight: 400
+     font-size: 1.1rem
+
+.footer-box a:hover
+     color: #0d213f
+     font-weight: 500
+     transition: all 0.3s ease-in-out
+
+.lower-footer
+     width: 100%
+     background-color: #0d213f
+     color: #ffff
+     display: flex
+     align-items: center
+     justify-content: center
+     font-size: 1.2rem
+     font-weight: 100
+     padding: 1rem
+
+@media (width < 1200px)
+     .img-section img:nth-child(1)
+          max-width: 240px
+
+     .img-section img:nth-child(2)
+          max-width: 160px
+
+     .img-section
+
+@media (width < 900px)
+     .nav-links .links
+          display: none
+
+     .container
+          grid-template-columns: repeat(1, 1fr)
+
+     .img-section
+          min-height: 550px
+
+     .destination-grid
+          gap: 1rem
+
+     .trip-grid
+          gap: 2rem
+          grid-template-columns: repeat(2, 1fr)
+
+     .reviews-grid
+          gap: 1rem
+          padding: 1rem
+
+     .footer-box
+          gap: 2rem
+          padding: 1.5rem
+
+@media (width < 600px)
+     .destination-grid
+          grid-template-columns: repeat(2, 1fr)
+
+     .trip-grid
+          grid-template-columns: repeat(1, 1fr)
+
+     .gallery-container
+          grid-template-columns: repeat(1, 1fr)
+          gap: 20rem
+
+     .gallery-images img:nth-child(1)
+          max-width: 180px
+          transform: translate(-92%, -50%)
+
+     .gallery-images img:nth-child(2)
+          max-width: 180px
+          transform: translate(5%, -120%)
+     .gallery-images img:nth-child(3)
+          max-width: 180px
+          transform: translate(5%, -18%)
+
+     .reviews-grid
+          grid-template-columns: repeat(1, 1fr)
+
+     .subscribe-container
+          grid-template-columns: repeat(1, 1fr)
+
+     .sub-email input
+          height: 2.4rem
+          width: 16rem
+
+     .footer-box
+          grid-template-columns: repeat(1, 1fr)
